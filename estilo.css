@@ -69,43 +69,6 @@ h1, h2, h3, p { margin: 0; }
 }
 .youtube-link .fa-youtube { font-size: 19px; color: var(--accent); }
 
-/* Balão de aviso: preços e promoções atualizados manualmente */
-.price-update-notice {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  width: min(510px, 100%);
-  margin: 12px 0 0 auto;
-  padding: 12px 15px;
-  color: #e7e5eb;
-  background: linear-gradient(135deg, #211d27, #191a22);
-  border: 1px solid #ff475755;
-  border-radius: 14px 14px 3px 14px;
-  box-shadow: 0 8px 24px #00000020;
-  font-size: 11px;
-  line-height: 1.65;
-}
-.price-update-notice .notice-icon {
-  flex: 0 0 auto;
-  margin-top: 2px;
-  color: var(--accent);
-  font-size: 14px;
-}
-.price-update-notice p { margin: 0; }
-.price-update-notice strong { color: #fff; }
-.price-update-notice .notice-tail {
-  position: absolute;
-  top: -6px;
-  right: 24px;
-  width: 11px;
-  height: 11px;
-  background: #211d27;
-  border-top: 1px solid #ff475755;
-  border-left: 1px solid #ff475755;
-  transform: rotate(45deg);
-}
-
 /* Profile */
 .profile { text-align: center; padding: 44px 0 20px; }
 .avatar-wrap { position: relative; width: 76px; margin: 0 auto 13px; }
@@ -371,11 +334,9 @@ a:focus-visible {
   .book-art { height: 215px; }
 }
 
-
-/* Preview de produto e disponibilidade KaguyaOP */
-.grid-card-item .kaguya-status { display:inline-flex; margin:7px 0 0; padding:4px 8px; border-radius:999px; font-size:10px; font-weight:800; }
-.grid-card-item .status-available { background:#153c2b; color:#8ef0b9; }
-.grid-card-item .status-unavailable { background:#48212a; color:#ffabb5; }
-.grid-card-item .status-preorder { background:#42331a; color:#ffd98b; }
-.grid-card-item .kaguya-price-old { font-size:11px; }
-.grid-card-item .book-card { cursor:pointer; }
+/* Banners promocionais com arte opcional à direita */
+.main-banner-carousel .main-slide-item{display:flex;align-items:center;justify-content:space-between;gap:clamp(16px,3vw,38px);overflow:hidden}
+.main-banner-carousel .promo-copy{position:relative;z-index:1;flex:1;min-width:0}
+.main-banner-carousel .promo-image{width:34%;max-width:300px;max-height:230px;object-fit:contain;object-position:center right;align-self:stretch;flex-shrink:0;border-radius:12px}
+.main-banner-carousel .promo-code{font-weight:800;color:#ffd166}
+@media(max-width:600px){.main-banner-carousel .main-slide-item{gap:10px}.main-banner-carousel .promo-image{width:35%;max-height:170px}.main-banner-carousel .main-slide-item h2{font-size:clamp(18px,5vw,26px)}.main-banner-carousel .main-slide-item p{font-size:12px}}

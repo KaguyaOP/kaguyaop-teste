@@ -333,3 +333,12 @@ a:focus-visible {
   .grid-card-item { width: 215px; }
   .book-art { height: 215px; }
 }
+
+
+/* Preview de produto e disponibilidade KaguyaOP */
+.grid-card-item .kaguya-status { display:inline-flex; margin:7px 0 0; padding:4px 8px; border-radius:999px; font-size:10px; font-weight:800; }
+.grid-card-item .status-available { background:#153c2b; color:#8ef0b9; }
+.grid-card-item .status-unavailable { background:#48212a; color:#ffabb5; }
+.grid-card-item .status-preorder { background:#42331a; color:#ffd98b; }
+.grid-card-item .kaguya-price-old { font-size:11px; }
+.grid-card-item .book-card { cursor:pointer; }

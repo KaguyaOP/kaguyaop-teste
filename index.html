@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KaguyaOP — Suas Próximas Obsessões</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="page-shell">
+        <!-- TOPBAR -->
+        <div class="topbar">
+            <div class="wordmark">
+                <span class="brand-symbol">月</span>KAGUYA<span>OP</span><span class="brand-dot">.</span>
+            </div>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="youtube-link">
+                <i class="fa-brands fa-youtube"></i>
+                <span>Canal no YouTube</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <!-- PROFILE -->
+        <header class="profile">
+            <div class="avatar-wrap">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='116' height='174' viewBox='0 0 116 174'%3E%3Crect width='116' height='174' fill='%2327222e'/%3E%3Ctext x='58' y='83' fill='%23ff4757' font-size='12' text-anchor='middle' font-family='sans-serif'%3EKAGUYAOP%3C/text%3E%3C/svg%3E" loading="lazy" alt="KaguyaOP Avatar" class="avatar" width="76" height="76">
+                <div class="online-dot"></div>
+            </div>
+            <div class="handle">@kaguyaop<i class="fa-solid fa-circle-check"></i></div>
+            <h1>Sua próxima <span>obsessão</span>.</h1>
+            <p class="bio">Do seu feed direto para a sua estante.<br class="mobile-break"> Mangás, light novels e histórias que marcam.</p>
+            <p class="curated-note"><span>✦</span> Curadoria de fã. Para fãs.</p>
+        </header>
+
+        <!-- SISTEMA DE FILTROS AVANÇADOS -->
+        <section class="filter-section">
+            <div class="filter-group">
+                <span class="filter-label">Ver apenas:</span>
+                <div class="main-filters">
+                    <button class="filter-btn active" data-main="all"><i class="fa-solid fa-border-all"></i> Tudo</button>
+                    <button class="filter-btn" data-main="manga"><i class="fa-solid fa-book-open"></i> Mangás</button>
+                    <button class="filter-btn" data-main="novel"><i class="fa-solid fa-book"></i> Light Novels</button>
+                </div>
+            </div>
+            
+            <div class="filter-group">
+                <span class="filter-label">Filtrar por Gênero:</span>
+                <div class="sub-filters">
+                    <button class="sub-btn" data-tag="fantasia">Fantasia</button>
+                    <button class="sub-btn" data-tag="romance">Romance</button>
+                    <button class="sub-btn" data-tag="acao">Ação</button>
+                    <button class="sub-btn" data-tag="misterio">Mistério</button>
+                    <button class="sub-btn" data-tag="shonen">Shonen</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARROSSEL BANNER PRINCIPAL (Novidades, Cupons, Promos) -->
+        <section class="carousel-container main-banner-carousel">
+            <div class="carousel-track" id="track-main">
+                
+                <!-- Slide 1: Promoção Relâmpago -->
+                <div class="carousel-slide main-slide-item visual-promo-1">
+                    <div class="slide-badge">⚡ PROMOÇÃO RELÂMPAGO</div>
+                    <h2>Semanas de Desconto Amazon</h2>
+                    <p>Mangás e Light Novels selecionados com até 40% de desconto físico e frete grátis Prime!</p>
+                    <a href="SEU_LINK_DE_AFILIADO_GERAL" target="_blank" rel="noopener noreferrer" class="slide-cta">Aproveitar Ofertas <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+                <!-- Slide 2: Cupom -->
+                <div class="carousel-slide main-slide-item visual-promo-2">
+                    <div class="slide-badge">🎟️ CUPOM EXCLUSIVO</div>
+                    <h2>Frete Grátis no Aplicativo</h2>
+                    <p>Abra os links direto no app da Shopee ou Amazon para garantir cupons adicionais de entrega.</p>
+                    <a href="#" class="slide-cta">Ver Instruções <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+            </div>
+            <button class="carousel-arrow prev" type="button" aria-label="Banner anterior" onclick="moveSlide('track-main', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="carousel-arrow next" type="button" aria-label="Próximo banner" onclick="moveSlide('track-main', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+        </section>
+
+        <!-- SEÇÃO MANGÁS POPULARES (Suporta até 12 itens no Carrossel) -->
+        <section class="book-section dynamic-shelf" data-section-type="manga">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">OS MAIS PROCURADOS</div>
+                    <h2>Mangás <span>em Alta</span></h2>
+                </div>
+                <div class="section-count">12 VOLUMES <i class="fa-solid fa-fire"></i></div>
+            </div>
+
+            <div class="carousel-container item-carousel">
+                <div class="carousel-track grid-track" id="track-manga">
+                    
+                    <!-- Item 1 -->
+                    <div class="grid-card-item searchable-item" data-type="manga" data-tags="shonen acao fantasia">
+                        <a href="LINK_AMAZON_MANGA_1" target="_blank" rel="noopener noreferrer sponsored" class="book-card">
+                            <div class="book-art art-purple">
+                                <span class="book-label">POPULAR</span>
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='116' height='174' viewBox='0 0 116 174'%3E%3Crect width='116' height='174' fill='%2327222e'/%3E%3Ctext x='58' y='83' fill='%23ff4757' font-size='12' text-anchor='middle' font-family='sans-serif'%3EKAGUYAOP%3C/text%3E%3C/svg%3E" loading="lazy" alt="Chainsaw Man">
+                            </div>
+                            <div class="book-info">
+                                <div class="book-meta">MANGA <span>VOL. 16</span></div>
+                                <h3>Chainsaw Man</h3>
+                                <div class="author">Tatsuki Fujimoto</div>
+                                <div class="book-bottom">
+                                    <span class="price">R$ 29,90</span>
+                                    <span class="amazon-link">Amazon <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="grid-card-item searchable-item" data-type="manga" data-tags="shonen acao romance">
+                        <a href="LINK_AMAZON_MANGA_2" target="_blank" rel="noopener noreferrer sponsored" class="book-card">
+                            <div class="book-art art-teal">
+                                <span class="book-label">RELEVANTE</span>
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='116' height='174' viewBox='0 0 116 174'%3E%3Crect width='116' height='174' fill='%2327222e'/%3E%3Ctext x='58' y='83' fill='%23ff4757' font-size='12' text-anchor='middle' font-family='sans-serif'%3EKAGUYAOP%3C/text%3E%3C/svg%3E" loading="lazy" alt="Jujutsu Kaisen">
+                            </div>
+                            <div class="book-info">
+                                <div class="book-meta">MANGA <span>VOL. 01</span></div>
+                                <h3>Jujutsu Kaisen</h3>
+                                <div class="author">Gege Akutami</div>
+                                <div class="book-bottom">
+                                    <span class="price">R$ 27,90</span>
+                                    <span class="amazon-link">Amazon <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Repita o padrão acima mudando as IDs, tags e links até completar 12 itens -->
+
+                </div>
+                <button class="carousel-arrow prev" type="button" aria-label="Rolar para a esquerda" onclick="moveGridSlide('track-manga', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-arrow next" type="button" aria-label="Rolar para a direita" onclick="moveGridSlide('track-manga', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+        
+        <!-- ================================================================= -->
+        <!-- SEÇÃO LIGHT NOVELS POPULARES -->
+        <!-- ================================================================= -->
+        <section class="book-section dynamic-shelf" data-section-type="novel">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">HISTÓRIAS PROFUNDAS</div>
+                    <h2>Light Novels <span>Favoritas</span></h2>
+                </div>
+                <div class="section-count">12 LIVROS <i class="fa-solid fa-book-bookmark"></i></div>
+            </div>
+
+            <div class="carousel-container item-carousel">
+                <div class="carousel-track grid-track" id="track-novel">
+                    
+                    <!-- Item 1 (Exemplo de Novel) -->
+                    <div class="grid-card-item searchable-item" data-type="novel" data-tags="fantasia acao">
+                        <a href="LINK_AMAZON_NOVEL_1" target="_blank" rel="noopener noreferrer sponsored" class="book-card">
+                            <div class="book-art art-rose">
+                                <span class="book-label">NOVEL</span>
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='116' height='174' viewBox='0 0 116 174'%3E%3Crect width='116' height='174' fill='%2327222e'/%3E%3Ctext x='58' y='83' fill='%23ff4757' font-size='12' text-anchor='middle' font-family='sans-serif'%3EKAGUYAOP%3C/text%3E%3C/svg%3E" loading="lazy" alt="Solo Leveling Novel">
+                            </div>
+                            <div class="book-info">
+                                <div class="book-meta">NOVEL <span>VOL. 01</span></div>
+                                <h3>Solo Leveling</h3>
+                                <div class="author">Chugong</div>
+                                <div class="book-bottom">
+                                    <span class="price">R$ 45,00</span>
+                                    <span class="amazon-link">Amazon <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Você pode duplicar o bloco acima aqui para adicionar mais novels -->
+
+                </div>
+                <button class="carousel-arrow prev" type="button" aria-label="Rolar para a esquerda" onclick="moveGridSlide('track-novel', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-arrow next" type="button" aria-label="Rolar para a direita" onclick="moveGridSlide('track-novel', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+
+        <!-- ================================================================= -->
+        <!-- SEÇÃO RECOMENDAÇÕES DA KAGUYA (Correção do Bloco) -->
+        <!-- ================================================================= -->
+        <section class="book-section dynamic-shelf" data-section-type="recomenda">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">ESPECIAL DA CASA</div>
+                    <h2>Recomendações da <span>Kaguya</span></h2>
+                </div>
+                <div class="section-count">PREMIUM <i class="fa-solid fa-star"></i></div>
+            </div>
+
+            <div class="carousel-container item-carousel">
+                <div class="carousel-track grid-track" id="track-kaguya">
+                    
+                    <!-- Item Recomendado 1 -->
+                    <div class="grid-card-item searchable-item" data-type="manga" data-tags="romance misterio">
+                        <a href="LINK_AMAZON_RECOMENDA_1" target="_blank" rel="noopener noreferrer sponsored" class="book-card">
+                            <div class="book-art art-mint">
+                                <span class="book-label">⭐ NOTA 10</span>
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='116' height='174' viewBox='0 0 116 174'%3E%3Crect width='116' height='174' fill='%2327222e'/%3E%3Ctext x='58' y='83' fill='%23ff4757' font-size='12' text-anchor='middle' font-family='sans-serif'%3EKAGUYAOP%3C/text%3E%3C/svg%3E" loading="lazy" alt="Manga Recomendado">
+                            </div>
+                            <div class="book-info">
+                                <div class="book-meta">INDICAÇÃO <span>LEITURA</span></div>
+                                <h3>Kaguya-sama: Love is War</h3>
+                                <div class="author">Aka Akasaka</div>
+                                <div class="book-bottom">
+                                    <span class="price">R$ 34,90</span>
+                                    <span class="amazon-link">Amazon <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Você pode duplicar o bloco acima aqui para colocar mais recomendações -->
+
+                </div>
+                <button class="carousel-arrow prev" type="button" aria-label="Rolar para a esquerda" onclick="moveGridSlide('track-kaguya', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-arrow next" type="button" aria-label="Rolar para a direita" onclick="moveGridSlide('track-kaguya', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+
+        <!-- ================================================================= -->
+        <!-- RODAPÉ (FOOTER) -->
+        <!-- ================================================================= -->
+        <footer>
+            <div class="footer-brand">
+                <span class="brand-symbol">月</span>KAGUYA<span>OP</span><span class="brand-dot">.</span>
+            </div>
+            <p>Boas histórias merecem um espaço físico na sua coleção.</p>
+            <p class="disclosure">Como Associado da Amazon, eu ganho comissões por compras qualificadas efetuadas através dos links gerados, sem nenhum custo adicional para você.</p>
+            <div class="made-with">CRIADO COM <i class="fa-solid fa-heart"></i> PARA COMUNIDADE OTAKU</div>
+        </footer>
+    </div>
+
+
+    <!-- ================================================================= -->
+    <!-- LOGICA SCRIPT JAVASCRIPT (Filtros e Carrossel) -->
+    <!-- ================================================================= -->
+    <script>
+        // Lógica de Deslocamento do Banner Principal
+        const mainCarouselIndexes = new Map();
+
+        function moveSlide(trackId, direction) {
+            const track = document.getElementById(trackId);
+            if (!track || !track.children.length) return;
+
+            const slides = track.children;
+            let index = mainCarouselIndexes.get(trackId) || 0;
+            index = (index + direction + slides.length) % slides.length;
+            mainCarouselIndexes.set(trackId, index);
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        // Lógica dos Carrosséis Laterais de Itens (Mangás/Novels/Recomendações)
+        function moveGridSlide(trackId, direction) {
+            const track = document.getElementById(trackId);
+            if (!track) return;
+            const scroller = track.closest('.item-carousel');
+            if (!scroller) return;
+
+            const firstCard = track.querySelector('.grid-card-item');
+            const scrollAmount = firstCard
+                ? firstCard.getBoundingClientRect().width + 16
+                : 266;
+            scroller.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+
+        // Sistema de Filtragem Cruzada Inteligente
+        const mainButtons = document.querySelectorAll('.filter-btn');
+        const subButtons = document.querySelectorAll('.sub-btn');
+        const items = document.querySelectorAll('.searchable-item');
+
+        let activeMainFilter = 'all';
+        let activeTags = [];
+
+        mainButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                mainButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                activeMainFilter = btn.getAttribute('data-main');
+                applyFilters();
+            });
+        });
+
+        subButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('active');
+                const tag = btn.getAttribute('data-tag');
+                if (activeTags.includes(tag)) {
+                    activeTags = activeTags.filter(t => t !== tag);
+                } else {
+                    activeTags.push(tag);
+                }
+                applyFilters();
+            });
+        });
+
+        function applyFilters() {
+            items.forEach(item => {
+                const itemType = item.dataset.type || '';
+                const itemTags = (item.dataset.tags || '').split(/\s+/).filter(Boolean);
+
+                const matchesMain = (activeMainFilter === 'all' || itemType === activeMainFilter);
+                const matchesTags = (activeTags.length === 0 || activeTags.some(t => itemTags.includes(t)));
+
+                if (matchesMain && matchesTags) {
+                    item.style.display = '';
+                    item.classList.remove('filtered-out');
+                } else {
+                    item.style.display = 'none';
+                    item.classList.add('filtered-out');
+                }
+            });
+
+            // Oculta títulos de seções vazias de forma inteligente caso nada coincida
+            document.querySelectorAll('.dynamic-shelf').forEach(shelf => {
+                const totalVisible = shelf.querySelectorAll('.searchable-item:not(.filtered-out)').length;
+                
+                if (totalVisible === 0) {
+                    shelf.style.display = 'none';
+                } else {
+                    shelf.style.display = '';
+                }
+            });
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/public-data.js"></script>
+
+</body>
+</html>
